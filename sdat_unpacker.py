@@ -49,9 +49,9 @@ if __name__ == '__main__':
     budle_folder = Path(sys.argv[0]).parent
     try:
         sdat_file = Path(sys.argv[1])
-        ex_dir = budle_folder/sdat_file.stem
-        unpack_sdat(sdat_file, ex_dir)
-        input('拆包完成!')
     except:
         input('输入路径错误！')
-    sys.exit()
+        sys.exit()
+    ex_dir = budle_folder/sdat_file.stem
+    unpack_sdat(sdat_file, ex_dir)
+    input('拆包完成!')
